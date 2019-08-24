@@ -1,5 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+#      include:
+#        mapper: /mapper-[\\w-\\.]+jar
+#        pagehelper: /pagehelper-[\\w-\\.]+jar
+#      exclude: static/**, public/**, WEB-INF/**
+
 zuul:
   routes:
     api:
-      url:
-        http: //localhost:8090
+      url: http://localhost:8081
